@@ -1,0 +1,44 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    It helped me compare by placing differences "side by side"
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    By allowing me to understand the basis of the program as well as reference 
+it quickly. Also, if I needed to see another persons contribution from a previous
+versions, I could reference that in version control.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    Pros - reduce memory usage, develop habit and helps evaluate (logical) value and 
+        focus of the contribution
+	Cons - lose material and history, don't develop mental habit and recognition of saves
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Allows for more efficient use of time and task completion. There may be existing
+        files that have close associations and/or dependencies on one another.  Tracing 
+        these multiple files and their coninciding changes may be more informative and
+        direct having them within the same commit.
+        
+
+How can you use the commands git log and git diff to view the history of files?
+
+    Git log gives you the Commit IDs, and Git diff allows one to compare differences incontent
+        between files for consecutive or non-consecutive committs.  
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    Knowing there is a back up copy of your work that you can reach, enables risks to be 
+	taken to trouble shoot and explore knowing that your work can be reached and losses
+	are minimized.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    Daily accomplishments at work.
