@@ -1,0 +1,9 @@
+What happens when you initialize a repository? Why do you need to do it? 
+a hidden folder ".git" is created that will track the history of the files. ie., their changes.  Otherwise, 
+data could be lost for my work and for the work of others.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+The staging directory is an intermediate/holding area between the w.d. and the repo.  It provides a place to keep
+your files which have been altered/changed and deemed ready for committing to the repo, while not fully committing
+them yet.  Kinda a place to hold files and the changes that you want to keep, but are not done with yet or have
+yet to complete other files that will join this/these particular file(s).
