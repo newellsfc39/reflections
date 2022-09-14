@@ -19,4 +19,9 @@ to contribute by sharing your forked copy.  When someone wants to personal work/
 clone the fork to ones own computer.  When someone wants to experiment or add a new feature from their own, or a 
 shared repository, becomes an opportune time to branch from the current master.
 
-
+What is the benefit of having a copy of the last known state of the remote stored locally?
+	There will be as few conflicts as possible and all the history is reachable.
+	git fetch
+	git merge
+	git pull
+	origin vs origin/master
