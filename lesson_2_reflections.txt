@@ -1,9 +1,79 @@
 What happens when you initialize a repository? Why do you need to do it? 
-a hidden folder ".git" is created that will track the history of the files. ie., their changes.  Otherwise, 
+    a hidden folder ".git" is created that will track the history of the files. ie., their changes.  Otherwise, 
 data could be lost for my work and for the work of others.
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
-The staging directory is an intermediate/holding area between the w.d. and the repo.  It provides a place to keep
+    The staging directory is an intermediate/holding area between the w.d. and the repo.  It provides a place to keep
 your files which have been altered/changed and deemed ready for committing to the repo, while not fully committing
 them yet.  Kinda a place to hold files and the changes that you want to keep, but are not done with yet or have
 yet to complete other files that will join this/these particular file(s).
+
+How can you use the staging area to make sure you have one commit per logical change?
+    You can specify which changes made from the staging area will be included in the commit.  Git diff has useful
+commands for this, being able to compare between working directory and staging area (git diff), or staging area and 
+repository (git diff --staged). Comparing commits within the repo features the command 'git diff -id1 -id2'.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+    When an experimental version of the repository is desired.  This would allow the master branch to stay intact.
+Additionally, when creating new variance of the version you are working on in the Master branch.  Also can be used
+when going to correct a bug.  Branches enable compartmentalizing so that reserve different issues which arise in 
+your workflow.  Development can be its' own branch.
+
+Commands associated are: 
+Git branch ... reflects what the current working branch/directory is.
+Git branch 'new branch name' ... creates a new branch
+Git checkout 'new branch name' ... command to switch to another branch 
+
+How do the diagrams help you visualize the branch structure?
+    They assist in understanding the history and chain of changes that exist and where one is and where they may 
+want to go.
+
+Commands associated are:
+Git checkout -b 'new branch name' ... two commands in one in order to create and then checkout to branch
+    Git branch 'new branch name' ... create new branch name
+    Git checkout 'new branch name' ... checkout (new) branch
+
+*********************
+If a branch is deleted and leaves some commits unreachable from existing branches, those commits will continue to 
+be accessible by commit id, until Git’s garbage collection runs. This will happen automatically from time to time, 
+unless you actively turn it off. You can also run this process manually with 'git gc'.
+*********************
+
+***************
+Checking out the coins branch
+If you haven't already checked out the coins branch, you'll need to do so now with the command git checkout coins 
+before you'll be able to refer to it. Once you've done that, decide whether you should keep it checked out or 
+check out a different branch before completing the merge.
+
+A note about git merge
+git merge will also include the currently checked-out branch in the merged version. So if you have branch1 
+checked out, and you run git merge branch2 branch3, the merged version will combine branch1 as well as branch2 
+and branch3. That’s because the branch1 label will update after you make the merge commit, so it’s unlikely 
+that you didn’t want the changes from branch1 included in the merge. For this reason, you should always 
+checkout one of the two branches you’re planning on merging before doing the merge. Which one you should check 
+out depends on which branch label you want to point to the new commit.
+
+Since the checked-out branch is always included in the merge, you may have guessed that when you are merging 
+two branches, you don't need to specify both of them as arguments to git merge on the command line. If you 
+want to merge branch2 into branch1, you can simply git checkout branch1 and then type git merge branch2. The 
+only reason to type git merge branch1 branch2 is if it helps you keep better mental track of which branches 
+you are merging.
+
+Also, since the two branches are merged, the order in which they are typed into the command line does not 
+matter. The key is to remember that git merge always merges all the specified branches into the currently 
+checked out branch, creating a new commit for that branch.
+***************
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+    The result is the saving/combining of the two commit branches into one.  The git log --graph --oneline
+provides a diagram that displays the two branches development and merge, enabling for easier commit history
+identification.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+    Git makes a reasonable conclusion on merges and recognizes changes in apparent similar files that may have 
+conflict and require owner attention and decision making.  The pro is that Git does not make decisions
+which may result in error, the con is that it may require more work/attention that is not needed should 
+changes really be harmless to have merged.
+
+Anything you have accomplished and can call it a single unit of work, is (may be) committable.  Proponent of 
+frequent commits.

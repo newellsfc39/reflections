@@ -1,0 +1,27 @@
+Concept Map: init, add, staging area
+We’ve introduced a few new concepts since we last revisited our concept map.
+
+git log ...  gives the history of commits
+git checkout
+git reflog ... reflects back on previous master after having checked out a previous commit
+
+
+git init
+git add
+git reset
+git status
+git diff ... shows difference between files or commits
+git diff shows diff btwn similar files in working directory and staging area
+git diff --staged shows diff btwen similar files in staging area and repo file
+staging area
+working directory
+
+git commit
+git checkout -b 'new branch name' ... accomplishes both of the following at the same time.
+    git branch '(new) branch name' ...  is a label
+    git checkout 'branch' ... places you at the head of the branch you're asking for
+git log --graph --oneline ... shows a diagram of the commit history, (including particular branches?)
+git merge branch1 branch2
+git show 'commit' ... shows the change associated wtih the commit given, if no commit given, will show the last commit
+
+
