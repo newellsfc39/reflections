@@ -25,3 +25,7 @@ What is the benefit of having a copy of the last known state of the remote store
 	git merge
 	git pull
 	origin vs origin/master
+
+
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+	Email, chat, phone, files, websites like wikipedia or .... ?
